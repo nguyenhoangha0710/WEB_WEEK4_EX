@@ -1,7 +1,9 @@
 package com.hoangha.jpaservlet.Controller;
 
 import com.hoangha.jpaservlet.DTO.ProductDTO;
+import com.hoangha.jpaservlet.Service.CategoryService;
 import com.hoangha.jpaservlet.Service.ProductService;
+import com.hoangha.jpaservlet.Service.impl.CategoryServiceImpl;
 import com.hoangha.jpaservlet.Service.impl.ProductServiceImpl;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -16,6 +18,9 @@ import java.util.List;
 @WebServlet(name = "homeController", urlPatterns = {"/home"})
 public class homeController extends HttpServlet {
     private ProductService productService = new ProductServiceImpl();
+    private CategoryService categoryService = new CategoryServiceImpl();
+
+
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)

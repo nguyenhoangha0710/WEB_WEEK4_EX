@@ -1,10 +1,9 @@
-package com.hoangha.jpaservlet.Respository;
+package com.hoangha.jpaservlet.Respository.impl;
 
 import com.hoangha.jpaservlet.Entity.ProductEntity;
+import com.hoangha.jpaservlet.Respository.ProductRespository;
 import com.hoangha.jpaservlet.config.JPAUtil;
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
 
 import java.util.List;
 

@@ -1,6 +1,7 @@
 package com.hoangha.jpaservlet.Controller;
 
 
+import com.hoangha.jpaservlet.DAO.AccountDAO;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -8,7 +9,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import com.hoangha.jpaservlet.DAO.AccountDAO;
+//import com.hoangha.jpaservlet.DAO.AccountDAO;
 import com.hoangha.jpaservlet.DTO.AccountDTO;
 
 import java.io.IOException;

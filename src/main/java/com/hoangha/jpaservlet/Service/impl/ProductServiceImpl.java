@@ -3,7 +3,7 @@ package com.hoangha.jpaservlet.Service.impl;
 import com.hoangha.jpaservlet.DTO.ProductDTO;
 import com.hoangha.jpaservlet.Entity.ProductEntity;
 import com.hoangha.jpaservlet.Respository.ProductRespository;
-import com.hoangha.jpaservlet.Respository.ProductRespositoryImpl;
+import com.hoangha.jpaservlet.Respository.impl.ProductRespositoryImpl;
 import com.hoangha.jpaservlet.Service.ProductService;
 
 import java.util.List;

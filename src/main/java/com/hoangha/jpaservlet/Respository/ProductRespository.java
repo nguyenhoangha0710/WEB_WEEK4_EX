@@ -14,4 +14,6 @@ public interface ProductRespository {
     void updateProduct(ProductEntity entity);
 
     void deleteProduct(int id);
+
+    List<ProductEntity> findByCategoryId(int categoryId);
 }

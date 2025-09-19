@@ -84,4 +84,19 @@ public class ProductRespositoryImpl implements ProductRespository {
             em.close();
         }
     }
+
+    @Override
+    public List<ProductEntity> findByCategoryId(int categoryId) {
+        EntityManager em = JPAUtil.getEntityManager();
+        try {
+            return em.createQuery(
+                            "SELECT p FROM ProductEntity p WHERE p.category.id = :categoryId",
+                            ProductEntity.class
+                    )
+                    .setParameter("categoryId", categoryId)
+                    .getResultList();
+        } finally {
+            em.close();
+        }
+    }
 }

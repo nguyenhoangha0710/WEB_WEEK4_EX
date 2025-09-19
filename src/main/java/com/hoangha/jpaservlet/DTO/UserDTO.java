@@ -75,6 +75,16 @@ public class UserDTO {
         return null;
     }
 
+
+    // Phương thức trả về Data URI dạng Base64 để hiển thị ảnh
+    public String getImageDataUri() {
+        if (product_image != null && product_image.length > 0) {
+            String base64Image = Base64.getEncoder().encodeToString(product_image);
+            return "data:image/png;base64," + base64Image;
+        }
+        return null;
+    }
+
     public void setBase64Image(String base64) {
     }
 }

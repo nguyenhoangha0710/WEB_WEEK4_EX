@@ -7,5 +7,5 @@ import jakarta.servlet.http.Part;
 public interface UserService {
     public UserDTO getUserByGmail(String gmail);
 
-    boolean updateUserProfile(String gmail, String address, String fullname, String phone, Part imagePart);
+    boolean updateUserProfile(String gmail, String address, String fullname, String phone,  byte[] imagePart);
 }

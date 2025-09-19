@@ -20,6 +20,10 @@ public class ProductEntity {
     @Column(name="price")
     private Double price;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category")
+    private CategoryEntity category;
+
     public Integer getId() {
         return id;
     }

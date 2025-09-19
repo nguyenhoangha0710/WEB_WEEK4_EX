@@ -64,4 +64,19 @@ public class ProductServiceImpl implements ProductService {
     public void deleteProduct(int id) {
         productRespository.deleteProduct(id); // Gọi repository để xóa theo ID
     }
+
+    @Override
+    public List<ProductDTO> findByCategory(int categoryId) {
+        List<ProductEntity> products = productRespository.findByCategoryId(categoryId);
+
+        // convert sang DTO
+        return products.stream()
+                .map(e -> new ProductDTO(
+                        e.getId(),
+                        e.getCode(),
+                        e.getName(),
+                        e.getPrice()
+                ))
+                .collect(Collectors.toList());
+    }
 }

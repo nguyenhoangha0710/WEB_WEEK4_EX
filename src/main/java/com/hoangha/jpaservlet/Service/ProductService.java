@@ -14,4 +14,6 @@ public interface ProductService {
     void updateProduct(ProductDTO product);
 
     void deleteProduct(int id);
+
+    List<ProductDTO> findByCategory(int categoryId);
 }
